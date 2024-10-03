@@ -1,0 +1,33 @@
+# BookRepo API
+
+###
+GET http://localhost:8000/
+
+###
+GET http://localhost:8000/books
+
+###
+GET http://localhost:8000/book/21
+
+###
+POST http://localhost:8000/books
+Content-Type: application/json
+
+{
+    "title": "The Deadliest2",
+    "author": "Brian Kemboi",
+    "year": 2024
+}
+
+###
+PUT http://localhost:8000/book/1
+Content-Type: application/json
+
+{
+    "title": "The Alchemist Updated"
+}
+
+###
+DELETE http://localhost:8000/books/21
+
+
