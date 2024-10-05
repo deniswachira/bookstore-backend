@@ -5,18 +5,18 @@ import { zValidator } from "@hono/zod-validator";
 
 export const bookRouter = new Hono();
 
-//get all cities
+//get all books
 bookRouter.get('/books', listAllBooks)
 
-//get city by id
+//get book by id
 bookRouter.get('/book/:id', getBookById)
 
-//insert city
+//insert book
 bookRouter.post('/books', zValidator('json',createBookValidator,(result,c)=>{
     if(!result.success) return c.text( result.error.message + "😒",400)}), insertBook)
 
-//update city
+//update book
 bookRouter.put('/books/:id', updateBook)
 
-//delete city
+//delete book
 bookRouter.delete('/books/:id', deleteBook)

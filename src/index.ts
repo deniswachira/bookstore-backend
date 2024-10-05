@@ -25,7 +25,7 @@ app.use(
 )
 //default routes
 app.get('/', (c) => {
-  return c.text('The server is running 🚀🚀 ')
+  return c.text('The server is running on PORT 8000 🚀🚀 ' )
 })
 app.notFound((c) => {
   return c.text('Route Not Found', 404)
